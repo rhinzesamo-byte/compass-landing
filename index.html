@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clarity &amp; Confidence Compass · 4-Week Taglish Course</title>
+  <meta name="description" content="A 4-week Taglish course that takes you from held back by fear to clear direction for 2027. Founding batch of 5–10 at ₱1,500.">
+  <meta property="og:title" content="Clarity & Confidence Compass">
+  <meta property="og:description" content="Clear direction for 2027, in 4 weeks — kahit natatakot ka pa.">
+  <meta property="og:image" content="assets/logo.webp">
+  <link rel="icon" href="assets/favicon.png">
+  <script>document.documentElement.classList.add('js')</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="top">
+    <a class="nav__brand" href="#top" aria-label="Clarity & Confidence Compass home">
+      <img src="assets/logo-mark.webp" alt="" width="40" height="41">
+      <span>Clarity &amp; Confidence <b>Compass</b></span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#method">Method</a>
+      <a href="#path">4-Week Path</a>
+      <a href="#pricing">Price</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn--sm" href="#enroll">Reserve a Spot</a>
+  </header>
+
+  <main>
+  <!-- ============ 1. HERO ============ -->
+  <section class="hero">
+    <div class="hero__glow" aria-hidden="true"></div>
+    <svg class="hero__line" viewBox="0 0 1400 700" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-20 560 C 220 420, 360 640, 620 520 S 1000 280, 1420 360" />
+    </svg>
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow reveal"><span class="dot"></span>4-Week Taglish Course · Founding Batch of 5–10</p>
+        <h1 class="hero__title reveal">Clear direction<br> for 2027,<br> in&nbsp;4&nbsp;weeks.</h1>
+        <p class="hero__accent reveal">
+          <span>kahit natatakot ka pa.</span>
+          <svg class="wavy" viewBox="0 0 300 20" preserveAspectRatio="none" aria-hidden="true"><path d="M2 12 C 30 2, 50 20, 78 10 S 128 2, 156 11 S 210 20, 236 9 S 280 4, 298 10"/></svg>
+        </p>
+        <p class="hero__lead reveal">Alam mong may kulang — pero pinipigilan ka ng takot na mabigo, mahusgahan, o makabigo ng iba. In 4 weeks, you’ll clear your mind and heart, find your direction with the <b>Compass Method</b>, and take one real <b>First Action</b> on a 30-day plan.</p>
+        <div class="hero__cta reveal">
+          <a class="btn btn--lg" href="#enroll">Reserve My Founding Spot <span class="btn__price">₱1,500</span></a>
+          <a class="link-arrow" href="#path">See the 4-week path</a>
+        </div>
+        <ul class="hero__trust reveal">
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg>Founders price (₱3,000 regular after)</li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg>Do-the-work refund guarantee</li>
+          <li><svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9"/></svg>Weekends: wala kang gagawin</li>
+        </ul>
+      </div>
+
+      <!-- Hero visual: interactive paper compass -->
+      <div class="hero__visual reveal" aria-label="The Compass Method: four leaves around YOU">
+        <div class="compass-stage">
+          <div class="paper paper--kraft" aria-hidden="true"></div>
+          <div class="paper paper--cream" aria-hidden="true"></div>
+          <svg class="compass" id="compass" viewBox="-220 -220 440 440" role="img" aria-labelledby="compassTitle">
+            <title id="compassTitle">Compass with four heart leaves: Good At (West), Love (North), World Needs (East), Paid For (South), and YOU in the center</title>
+            <defs>
+              <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#0F3B2C" flood-opacity=".28"/>
+              </filter>
+              <path id="heart" d="M0 -4 C -10 -16, -62 -40, -62 -86 C -62 -114, -38 -130, -16 -124 C -6 -121, 0 -112, 0 -104 C 0 -112, 6 -121, 16 -124 C 38 -130, 62 -114, 62 -86 C 62 -40, 10 -16, 0 -4 Z"/>
+            </defs>
+            <circle r="212" fill="#0F3B2C"/>
+            <circle r="198" fill="#B9D3B4" filter="url(#paperShadow)"/>
+            <g class="ticks" stroke="#0F3B2C" stroke-width="2.2" stroke-linecap="round" id="ticks"></g>
+            <circle r="160" fill="none" stroke="#0F3B2C" stroke-width="2"/>
+            <circle r="156" fill="#F7F1E5" filter="url(#paperShadow)"/>
+            <g class="compass__letters" font-family="Georgia, serif" font-weight="700" font-size="26" fill="#0F3B2C" text-anchor="middle">
+              <text y="-171">N</text><text x="181" y="9">E</text><text y="190">S</text><text x="-181" y="9">W</text>
+            </g>
+            <g class="compass__rose" id="rose">
+              <use href="#heart" class="leaf" data-leaf="N" fill="#217047" filter="url(#paperShadow)"/>
+              <use href="#heart" class="leaf" data-leaf="E" fill="#5E9A72" transform="rotate(90)" filter="url(#paperShadow)"/>
+              <use href="#heart" class="leaf" data-leaf="S" fill="#174D35" transform="rotate(180)" filter="url(#paperShadow)"/>
+              <use href="#heart" class="leaf" data-leaf="W" fill="#0F3B2C" transform="rotate(270)" filter="url(#paperShadow)"/>
+            </g>
+            <circle r="38" fill="#F2C14E" filter="url(#paperShadow)"/>
+            <text class="compass__you" y="9" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="25" fill="#0F3B2C">YOU</text>
+          </svg>
+
+          <button class="tag tag--n" data-leaf="N" type="button"><small>N · Week 2 Wed</small>What You Love</button>
+          <button class="tag tag--e" data-leaf="E" type="button"><small>E · Week 3 Mon</small>What the World Needs</button>
+          <button class="tag tag--s" data-leaf="S" type="button"><small>S · Week 3 Wed</small>What You Can Be Paid For</button>
+          <button class="tag tag--w" data-leaf="W" type="button"><small>W · Week 2 Mon</small>What You Are Good At</button>
+
+          <div class="scribble scribble--hero" aria-hidden="true">
+            <span>ikaw ang gitna</span>
+            <svg viewBox="0 0 120 70"><path d="M6 10 C 40 4, 86 14, 98 52"/><path d="M86 46 L 99 55 L 104 39"/></svg>
+          </div>
+        </div>
+        <p class="compass-caption" id="compassCaption" aria-live="polite">Tap a leaf · the Compass Method</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. PROBLEM ============ -->
+  <section class="problem" aria-labelledby="problemTitle">
+    <span class="bigword" aria-hidden="true">TAKOT</span>
+    <div class="wrap problem__grid">
+      <div class="problem__copy">
+        <p class="kicker reveal">Sound familiar?</p>
+        <h2 id="problemTitle" class="h2 reveal">Alam mong may kulang. <span class="muted">Hindi mo lang alam kung saan magsisimula.</span></h2>
+        <p class="reveal">You know you need to change. Pero every time you think about it, the same noise comes back — and it’s louder than your own voice.</p>
+        <p class="reveal">That’s not laziness. That’s fear doing its job. This course doesn’t ask you to stop being scared. It helps you <b>clear the noise first</b>, then move anyway.</p>
+      </div>
+      <div class="noise reveal" aria-label="Common fears">
+        <div class="noise__note n1">“Paano kung mabigo ako?”<small>fear of failing</small></div>
+        <div class="noise__note n2">“Ano’ng sasabihin nila?”<small>fear of being judged</small></div>
+        <div class="noise__note n3">“Baka ma-disappoint ko sila.”<small>fear of letting others down</small></div>
+        <div class="noise__note n4">“Ang dami kong iniisip…”<small>the noise</small></div>
+        <p class="noise__annot">Week 1 natin ’to aayusin
+          <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M8 6 C 30 10, 44 26, 42 50"/><path d="M32 42 L 42 52 L 50 40"/></svg>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. THE SHIFT / METHODS ============ -->
+  <section class="method" id="method" aria-labelledby="methodTitle">
+    <div class="method__glow" aria-hidden="true"></div>
+    <svg class="divider divider--top" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0 H1440 V30 C 1180 80, 940 10, 700 44 S 220 70, 0 28 Z"/></svg>
+    <div class="wrap">
+      <p class="kicker kicker--gold reveal">The shift</p>
+      <h2 id="methodTitle" class="h2 h2--light reveal">Two methods. <span class="accent-inline">One direction.</span></h2>
+      <p class="method__flow reveal" aria-label="Clear, Find, Act, Become">
+        <span>Clear</span><i>→</i><span>Find</span><i>→</i><span>Act</span><i>→</i><span class="gold">Become</span>
+      </p>
+
+      <div class="method__grid">
+        <article class="mcard reveal">
+          <p class="mcard__label">The Path Method <em>Ang Landas</em></p>
+          <p class="mcard__sub">Clears the way before and after you find your direction.</p>
+          <ol class="steps">
+            <li><b>Clear Mind</b> <em>Malinaw na Isip</em><span>Week 1 Mon</span></li>
+            <li><b>Clear Heart</b> <em>Malinaw na Puso</em><span>Week 1 Wed</span></li>
+            <li class="steps__gap" aria-hidden="true"><span>— the Compass in between —</span></li>
+            <li><b>Clear Plan</b> <em>Malinaw na Plano</em><span>Week 4 Mon</span></li>
+            <li><b>Clear Action</b> <em>Malinaw na Pagkilos</em><span>Week 4 Wed</span></li>
+          </ol>
+        </article>
+
+        <article class="mcard mcard--compass reveal">
+          <p class="mcard__label">The Compass Method <em>Ang Aguhon</em></p>
+          <p class="mcard__sub">Four leaves that point to where you belong.</p>
+          <div class="leaves">
+            <div class="leafcard"><b>W</b><p>What You Are Good At</p><span>Week 2 Mon</span></div>
+            <div class="leafcard"><b>N</b><p>What You Love</p><span>Week 2 Wed</span></div>
+            <div class="leafcard"><b>E</b><p>What the World Needs</p><span>Week 3 Mon</span></div>
+            <div class="leafcard"><b>S</b><p>What You Can Be Paid For</p><span>Week 3 Wed</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+    <svg class="divider divider--bottom" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 80 H1440 V36 C 1200 0, 980 70, 720 40 S 240 0, 0 46 Z"/></svg>
+  </section>
+
+  <!-- ============ 4. 4-WEEK PATH ============ -->
+  <section class="path" id="path" aria-labelledby="pathTitle">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker reveal">Your 4-week path</p>
+        <h2 id="pathTitle" class="h2 reveal">One week at a time. <span class="hand hand--inline">walang madalian.</span></h2>
+      </div>
+
+      <div class="journey reveal">
+        <svg class="journey__line" viewBox="0 0 1000 40" preserveAspectRatio="none" aria-hidden="true"><path id="journeyPath" d="M10 20 C 120 0, 200 40, 300 20 S 480 0, 590 20 S 780 40, 990 20"/></svg>
+        <div class="journey__tabs" role="tablist" aria-label="Weeks">
+          <button role="tab" id="t0" aria-controls="p0" aria-selected="true" tabindex="0"><span>Wk 0</span>Start Here</button>
+          <button role="tab" id="t1" aria-controls="p1" aria-selected="false" tabindex="-1"><span>Wk 1</span>Clear</button>
+          <button role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1"><span>Wk 2</span>Find</button>
+          <button role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1"><span>Wk 3</span>Find</button>
+          <button role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1"><span>Wk 4</span>Act → Become</button>
+        </div>
+
+        <div class="journey__panels">
+          <div class="wpanel" role="tabpanel" id="p0" aria-labelledby="t0">
+            <div class="wpanel__main">
+              <p class="wpanel__tag">Week 0 · Simula</p>
+              <h3>Start Here</h3>
+              <p>Once your payment is confirmed, you get my welcome message and your Google Classroom code. You join, copy your Compass Workbook, and take my web <b>Archetype Quiz</b> — so you know which of six archetypes you lean toward, and the fear that often comes with it.</p>
+            </div>
+            <div class="wpanel__out"><p class="hand">you leave with</p><ul><li>Classroom access</li><li>Your archetype, written in your workbook</li></ul></div>
+          </div>
+
+          <div class="wpanel" role="tabpanel" id="p1" aria-labelledby="t1" hidden>
+            <div class="wpanel__main">
+              <p class="wpanel__tag">Week 1 · CLEAR</p>
+              <h3>Clear Mind + Clear Heart</h3>
+              <p><b>Mon:</b> a brain dump sorted into <em>Hawak Ko · Hindi Ko Hawak · Hindi Akin</em>. You name one fear and clear one small corner.<br><b>Wed:</b> name 3 feelings, write your energy lists and a private money snapshot, and finish the line <em>“Gusto kong maramdaman sa 2027 na…”</em></p>
+              <p class="wpanel__safe">Your fears, money and heavy feelings are never asked for in the group.</p>
+            </div>
+            <div class="wpanel__out"><p class="hand">you leave with</p><ul><li>A sorted brain dump + one named fear</li><li>Feelings &amp; energy lists</li><li>Your 2027 line</li></ul></div>
+          </div>
+
+          <div class="wpanel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+            <div class="wpanel__main">
+              <p class="wpanel__tag">Week 2 · FIND · West + North</p>
+              <h3>What You Are Good At + What You Love</h3>
+              <p><b>Mon:</b> list 10+ strengths and ask 3 people, <em>“Kailan mo ako nakitang nasa best ko?”</em><br><b>Wed:</b> list 10+ loves, then do one loved thing for 30 minutes before Friday. (15 minutes still counts.)</p>
+            </div>
+            <div class="wpanel__out"><p class="hand">you leave with</p><ul><li>“Ang galing ko ay…”</li><li>“Ang mahal ko ay…, at magaling ako sa…”</li></ul></div>
+          </div>
+
+          <div class="wpanel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+            <div class="wpanel__main">
+              <p class="wpanel__tag">Week 3 · FIND · East + South</p>
+              <h3>What the World Needs + What You Can Be Paid For</h3>
+              <p><b>Mon:</b> the problems and people you care about, plus one 15–20 minute listening conversation.<br><b>Wed:</b> map three paths of value — your current job, a career shift, or your own small offer — and run one small test. <em>No quitting, no spending, no announcements.</em></p>
+            </div>
+            <div class="wpanel__out"><p class="hand">you leave with</p><ul><li>Your full Compass statement</li><li>One tested possibility</li></ul></div>
+          </div>
+
+          <div class="wpanel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+            <div class="wpanel__main">
+              <p class="wpanel__tag">Week 4 · ACT → BECOME</p>
+              <h3>Clear Plan + Clear Action</h3>
+              <p><b>Mon:</b> one priority, a WOOP (Wish, Outcome, Obstacle, Plan), four weekly steps with day, time and place, and one support person.<br><b>Wed:</b> you start your <b>First Action</b> during the lesson and finish it within 48 hours. <b>Fri:</b> graduation.</p>
+              <p class="wpanel__safe">After the course, I check in with you on Day 15 and Day 30.</p>
+            </div>
+            <div class="wpanel__out"><p class="hand">you leave with</p><ul><li>A 30-Day Plan</li><li>Your First Action — done</li><li>A setback plan + Day 30 letter</li></ul></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. WEEKLY RHYTHM + WHAT'S INSIDE ============ -->
+  <section class="rhythm" aria-labelledby="rhythmTitle">
+    <div class="wrap rhythm__grid">
+      <div class="rhythm__copy">
+        <p class="kicker reveal">How a week feels</p>
+        <h2 id="rhythmTitle" class="h2 reveal">Built for people with real lives.</h2>
+        <p class="reveal">Two short lessons, one live call, and weekends off. Everything lives in Google Classroom, so you always know what’s next.</p>
+        <ul class="inside reveal" aria-label="What's included">
+          <li><b>8 Taglish video lessons</b><span>2 a week · 10–16 minutes each, with pause points</span></li>
+          <li><b>8 guided activities</b><span>in Google Classroom, with clear “done” rules</span></li>
+          <li><b>4 live Friday calls</b><span>Google Meet · recorded and posted that night</span></li>
+          <li><b>Compass Workbook</b><span>8 worksheets · Google Doc or printable PDF</span></li>
+          <li><b>Archetype Quiz</b><span>find your archetype in Week 0</span></li>
+          <li><b>Optional AI prompts</b><span>they ask you questions — and never decide for you</span></li>
+        </ul>
+      </div>
+
+      <div class="board reveal" aria-label="Weekly schedule">
+        <div class="board__pin" aria-hidden="true"></div>
+        <div class="day"><p class="day__name">Mon</p><p class="day__what">Lesson + activity</p><p class="day__due">due Wednesday</p></div>
+        <div class="day"><p class="day__name">Wed</p><p class="day__what">Lesson + activity</p><p class="day__due">due Friday</p></div>
+        <div class="day day--live"><p class="day__name">Fri</p><p class="day__what">Live call · 8:00–8:55 PM</p><p class="day__due">sharing, coaching, speaking practice</p></div>
+        <div class="day day--rest"><p class="day__name">Sat–Sun</p><p class="day__what">Wala kang gagawin.</p><p class="day__due hand">pahinga. promise.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. OUTCOMES ============ -->
+  <section class="outcome" aria-labelledby="outcomeTitle">
+    <div class="wrap outcome__grid">
+      <div class="sheet reveal" aria-label="Sample workbook page">
+        <p class="sheet__head">My Compass Journey <span>Workbook · final page</span></p>
+        <div class="sheet__line"><span class="sheet__q">Ang galing ko ay</span><span class="sheet__fill"></span></div>
+        <div class="sheet__line"><span class="sheet__q">Ang mahal ko ay</span><span class="sheet__fill"></span></div>
+        <div class="sheet__line"><span class="sheet__q">Gusto kong tulungan</span><span class="sheet__fill"></span></div>
+        <div class="sheet__line"><span class="sheet__q">Gusto kong maramdaman sa 2027 na</span><span class="sheet__fill"></span></div>
+        <ul class="sheet__checks">
+          <li><span class="box"></span>30-Day Plan · 4 steps scheduled</li>
+          <li><span class="box"></span>First Action · done, with proof</li>
+          <li><span class="box"></span>Setback plan · “never miss twice”</li>
+        </ul>
+        <p class="sheet__note hand">ikaw ang magsusulat nito ✎</p>
+      </div>
+      <div class="outcome__copy">
+        <p class="kicker reveal">What you walk away with</p>
+        <h2 id="outcomeTitle" class="h2 reveal">Not just a feeling. <span class="muted">Something you can hold.</span></h2>
+        <ol class="outlist reveal">
+          <li><b>Your full Compass statement</b> — what you’re good at, what you love, what the world needs, and what you can be paid for, in your own words.</li>
+          <li><b>A 30-Day Plan</b> — one priority, four weekly steps with a day, time and place, and one support person.</li>
+          <li><b>Your First Action, done</b> — not planned. Done, with proof, within 48 hours.</li>
+          <li><b>A setback plan + a Day 30 letter</b> — because slipping is normal. Bumabalik tayo.</li>
+        </ol>
+        <a class="btn" href="#enroll">Reserve My Founding Spot</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 7. WHO IT'S FOR ============ -->
+  <section class="fit" aria-labelledby="fitTitle">
+    <div class="wrap">
+      <h2 id="fitTitle" class="h2 center reveal">Is this for you?</h2>
+      <div class="fit__grid">
+        <div class="fit__col fit__col--yes reveal">
+          <p class="fit__label">Para sa’yo ’to kung…</p>
+          <ul>
+            <li>you feel something is missing and you’re ready to change</li>
+            <li>fear keeps stopping you — of failing, being judged, or letting others down</li>
+            <li>you want direction you can act on, not just more inspiration</li>
+            <li>you can give two short lessons and one Friday call a week</li>
+            <li>you’re any age, in any kind of work — or between jobs</li>
+          </ul>
+        </div>
+        <div class="fit__col fit__col--no reveal">
+          <p class="fit__label">Hindi muna ’to para sa’yo kung…</p>
+          <ul>
+            <li>you need therapy or crisis support — this is coaching, not therapy</li>
+            <li>you want guaranteed income — I never promise income or give financial advice</li>
+            <li>you want someone to decide your life for you</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. FOUNDER ============ -->
+  <section class="founder" aria-labelledby="founderTitle">
+    <div class="wrap founder__grid">
+      <figure class="founder__photo reveal">
+        <div class="founder__frame">
+          <img src="assets/rhinzes.webp" alt="Rhinzes Amo on a paper-cutout forest bridge" width="960" height="960">
+        </div>
+        <figcaption class="hand">ako ’yan — your guide ✿</figcaption>
+      </figure>
+      <div class="founder__copy">
+        <p class="kicker reveal">Your guide</p>
+        <h2 id="founderTitle" class="h2 reveal">Hi, ako si Rhinzes.</h2>
+        <p class="founder__role reveal">Guide · System Builder · Connector</p>
+        <p class="reveal">I built this course on my own 8-lesson curriculum, around two methods I teach: the Path Method and the Compass Method. Every lesson is in Taglish, with an example you’ll recognize — Mika, 27, working at a BPO in Pasig — so it feels like real life, not a textbook.</p>
+        <p class="reveal">I’ll be with you on every Friday call. And when you graduate in Week 4, I’ll close it with a song. After the course, I’ll still check in on Day 15 and Day 30.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 9. PRICING ============ -->
+  <section class="pricing" id="pricing" aria-labelledby="pricingTitle">
+    <div class="pricing__glow" aria-hidden="true"></div>
+    <div class="wrap pricing__grid">
+      <div class="pricing__copy">
+        <p class="kicker kicker--gold reveal">Founding batch</p>
+        <h2 id="pricingTitle" class="h2 h2--light reveal">Be one of the <span class="nowrap">first <span class="circled">5–10</span>.</span></h2>
+        <p class="reveal">This is the very first batch of Clarity &amp; Confidence Compass. Small on purpose, so everyone gets heard on the Friday calls. Founders pay ₱1,500 — after this batch, the regular price is ₱3,000.</p>
+        <div class="guarantee reveal">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4 L40 10 V22 C40 33, 33 40, 24 44 C15 40, 8 33, 8 22 V10 Z"/><path d="M16 24 l6 6 l11 -12"/></svg>
+          <div>
+            <p class="guarantee__title">Do-the-work guarantee</p>
+            <p>Submit the activities for all 8 lessons, attend or watch all 4 calls, and attempt your First Action. If you did all that and still have no clear direction, you get a refund. Requests are accepted until 7 days after graduation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="ticket reveal">
+        <div class="ticket__top">
+          <p class="ticket__label">Founders Pass</p>
+          <p class="ticket__price"><span class="cur">₱</span>1,500</p>
+          <p class="ticket__reg">Regular after this batch: <s>₱3,000</s></p>
+        </div>
+        <div class="ticket__tear" aria-hidden="true"></div>
+        <ul class="ticket__list">
+          <li>8 Taglish video lessons</li>
+          <li>8 guided activities in Google Classroom</li>
+          <li>4 live Friday calls (recorded)</li>
+          <li>Compass Workbook + Archetype Quiz</li>
+          <li>Optional AI prompt for every lesson</li>
+          <li>Day 15 &amp; Day 30 check-ins</li>
+        </ul>
+        <a class="btn btn--gold btn--block" href="#enroll">Reserve My Founding Spot</a>
+        <p class="ticket__pay">Pay by QR Ph / InstaPay — GCash, Maya or any bank app</p>
+        <p class="ticket__scribble hand" aria-hidden="true">founding batch lang ’to ↗</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 10. CHECKOUT ============ -->
+  <section class="enroll" id="enroll" aria-labelledby="enrollTitle">
+    <div class="wrap enroll__wrap">
+      <div class="enroll__head">
+        <p class="kicker">Reserve your spot</p>
+        <h2 id="enrollTitle" class="h2">Three quick steps.</h2>
+        <ol class="stepper" aria-label="Checkout progress">
+          <li class="is-active" data-step="1"><span>1</span>Your details</li>
+          <li data-step="2"><span>2</span>Pay by QR</li>
+          <li data-step="3"><span>3</span>Confirmation</li>
+        </ol>
+      </div>
+
+      <div class="demo-banner" id="demoBanner" hidden>Demo mode — backend not connected yet. Nothing is saved. Add your Apps Script URL in <code>config.js</code>.</div>
+
+      <div class="checkout">
+        <!-- STEP 1 -->
+        <form class="cstep" id="step1" novalidate>
+          <h3>Your details</h3>
+          <p class="cstep__sub">Use the email you’ll check — your welcome message and Classroom code go here.</p>
+          <label>Full name<input name="name" autocomplete="name" required maxlength="80" placeholder="Juan Dela Cruz"></label>
+          <label>Email<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@gmail.com"></label>
+          <label>Mobile number <em>(optional)</em><input name="phone" type="tel" autocomplete="tel" maxlength="20" placeholder="09XX XXX XXXX"></label>
+          <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+          <label class="check"><input type="checkbox" name="consent" required> I understand this is coaching, not therapy, and that course dates will be announced to the founding batch.</label>
+          <div class="turnstile" data-turnstile></div>
+          <button class="btn btn--block" type="submit">Continue to Payment</button>
+          <p class="form-msg" role="alert"></p>
+        </form>
+
+        <!-- STEP 2 -->
+        <form class="cstep" id="step2" hidden novalidate>
+          <h3>Scan to pay</h3>
+          <div class="pay">
+            <div class="pay__qrwrap">
+              <div class="pay__switch" role="group" aria-label="Choose a QR code" id="qrSwitch"></div>
+              <div class="pay__qr">
+                <img id="qrImg" src="assets/gcash-qr.png" alt="GCash QR code for Rhinzes Amo">
+              </div>
+              <p class="pay__hint">Both are InstaPay QR codes. Any bank or e-wallet app can scan either one.</p>
+            </div>
+            <div class="pay__info">
+              <p class="pay__amount">Amount: <b id="payAmount">₱1,500</b></p>
+              <p class="pay__order">Order ID: <b id="payOrder">—</b> <button type="button" class="copy" data-copy="payOrder">copy</button></p>
+              <p class="pay__payee" id="payPayee"></p>
+              <ol class="pay__how">
+                <li>Open GCash, Maya or your bank app and scan either QR.</li>
+                <li>Pay the exact amount. Put your Order ID in the note if your app allows it.</li>
+                <li>Copy the <b>reference number</b> from your receipt and paste it below.</li>
+              </ol>
+            </div>
+          </div>
+          <label>Payment reference number<input name="reference" required maxlength="40" placeholder="e.g. 1234 567 890123" autocomplete="off"></label>
+          <label>Name on the paying account<input name="payerName" maxlength="80" placeholder="If different from yours"></label>
+          <div class="turnstile" data-turnstile></div>
+          <button class="btn btn--block" type="submit">I’ve Paid — Submit Reference</button>
+          <p class="form-msg" role="alert"></p>
+          <button type="button" class="text-btn" id="restart">Start over with a different email</button>
+        </form>
+
+        <!-- STEP 3 -->
+        <div class="cstep cstep--done" id="step3" hidden tabindex="-1">
+          <svg class="done-check" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34"/><path d="M24 41 l11 11 l22 -24"/></svg>
+          <h3>Salamat! Reference received.</h3>
+          <p>Order <b id="doneOrder">—</b> is now <b>waiting for payment confirmation</b>. I check every payment by hand. Once it’s confirmed, your welcome message and Google Classroom code will arrive by email.</p>
+          <p class="hand done-note">Hindi pa ’to “paid” — konting hintay lang.</p>
+          <p class="small">No email after confirmation? Check Spam or Promotions, or <a href="#resend">request your access again</a>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 11. FAQ ============ -->
+  <section class="faq" id="faq" aria-labelledby="faqTitle">
+    <div class="wrap faq__grid">
+      <div class="faq__side">
+        <p class="kicker reveal">Questions</p>
+        <h2 id="faqTitle" class="h2 reveal">Mga tanong bago ka mag-enroll.</h2>
+        <p class="hand faq__hand reveal">walang tanong na “OA” dito.</p>
+      </div>
+      <div class="faq__list">
+        <details><summary>When does the course start?</summary><p>The dates for the founding batch aren’t set yet. They’ll be announced to everyone who enrolls in this batch before Week 1. Every date in Classroom is counted from Week 1 Monday.</p></details>
+        <details><summary>How much time do I need each week?</summary><p>About 20–45 minutes for each Monday and Wednesday lesson and activity, plus the 55-minute Friday call. Some activities include a small real-life task, like one 15–20 minute conversation. Weekends are free.</p></details>
+        <details><summary>What if I miss a Friday call?</summary><p>Every call is recorded and posted in Google Classroom that night. Watching the recording counts toward the guarantee.</p></details>
+        <details><summary>Do I have to share my fears or money situation with the group?</summary><p>No. Your fears, money and heavy feelings are never asked for in the group. Those parts of the workbook stay private. Sharing on calls is volunteers-first, and you can pass.</p></details>
+        <details><summary>Is this therapy?</summary><p>No — this is coaching, not therapy. If you’re in crisis, please reach the NCMH Crisis Hotline at 1553, 0917-899-8727 or 0919-057-1553 (24/7), or call 911.</p></details>
+        <details><summary>Will this help me earn more money?</summary><p>I don’t promise income or give financial advice. In Week 3, you explore three paths of value — your current job, a career shift, or your own small offer — and every path is valid.</p></details>
+        <details><summary>How do I pay, and when do I get access?</summary><p>Scan the QR with GCash, Maya or any bank app that supports QR Ph / InstaPay, then submit your reference number. I check each payment by hand. Once it’s confirmed, your welcome message and Classroom code arrive by email.</p></details>
+        <details><summary>What do I need?</summary><p>A Google account (for Google Classroom and your workbook), a phone or laptop, and the willingness to do the activities. Using AI is optional.</p></details>
+        <details><summary>How does the refund guarantee work?</summary><p>If you submit the activities for all 8 lessons, attend or watch all 4 calls, and attempt your First Action — and still have no clear direction — you get a refund. Requests are accepted until 7 days after graduation.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 12. FINAL CTA ============ -->
+  <section class="final" aria-labelledby="finalTitle">
+    <div class="final__glow" aria-hidden="true"></div>
+    <div class="wrap final__wrap">
+      <img class="final__mark reveal" src="assets/logo-mark.webp" alt="" width="110" height="112">
+      <h2 id="finalTitle" class="final__title reveal">Saan ka papunta sa 2027?</h2>
+      <p class="final__hand hand reveal">sabay nating hanapin.</p>
+      <a class="btn btn--gold btn--lg reveal" href="#enroll">Reserve My Founding Spot <span class="btn__price">₱1,500</span></a>
+
+      <div class="minis">
+        <form class="mini reveal" id="leadForm" novalidate>
+          <p class="mini__title">Not ready yet?</p>
+          <p class="mini__sub">Get an email when the course dates are set.</p>
+          <div class="mini__row">
+            <input name="name" placeholder="First name" aria-label="First name" maxlength="80" required>
+            <input name="email" type="email" placeholder="Email" aria-label="Email" maxlength="120" required>
+            <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn--ghost" type="submit">Notify Me</button>
+          </div>
+          <div class="turnstile" data-turnstile></div>
+          <p class="form-msg" role="status"></p>
+        </form>
+
+        <form class="mini reveal" id="resend" novalidate>
+          <p class="mini__title">Already paid?</p>
+          <p class="mini__sub">Didn’t get your access email? Request it again.</p>
+          <div class="mini__row">
+            <input name="email" type="email" placeholder="Email you used" aria-label="Email you used" maxlength="120" required>
+            <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <button class="btn btn--ghost" type="submit">Resend Access</button>
+          </div>
+          <div class="turnstile" data-turnstile></div>
+          <p class="form-msg" role="status"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__grid">
+      <img src="assets/logo.webp" alt="Clarity & Confidence Compass" width="200" height="212" class="footer__logo">
+      <div>
+        <p><b>Clarity &amp; Confidence Compass</b> · a 4-week Taglish course by Rhinzes Amo</p>
+        <p class="footer__safe">This is coaching, not therapy. If you’re in crisis, reach the NCMH Crisis Hotline: 1553 · 0917-899-8727 · 0919-057-1553 (24/7), or call 911.</p>
+        <p class="footer__small">No income promises. No financial advice. © 2026 Rhinzes Amo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="sticky-cta" href="#enroll" id="stickyCta">
+    <span><b>₱1,500</b> founders price · 5–10 seats</span>
+    <span class="sticky-cta__btn">Reserve</span>
+  </a>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
