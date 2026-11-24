@@ -275,6 +275,8 @@ p{margin:0 0 1em}
 .founder__photo:hover img{transform:scale(1.04)}
 .founder__photo::before{content:"";position:absolute;inset:6% -5% -4% 6%;background:var(--kraft);border-radius:50% 50% 24px 24px/38% 38% 24px 24px;transform:rotate(4deg);z-index:-1}
 .founder__photo figcaption{position:absolute;right:-10px;bottom:-30px;font-size:30px;transform:rotate(-5deg);background:var(--gold);padding:4px 16px 8px;border-radius:8px;color:var(--forest);box-shadow:var(--shadow)}
+.founder__copy .founder__nick{font-size:clamp(30px,3.2vw,40px)!important;color:var(--leaf);margin:-8px 0 20px;transform:rotate(-2deg);display:inline-block}
+.founder .heart{font-size:.7em;vertical-align:.15em}
 .founder__role{font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:14px;color:var(--sage)}
 .founder__copy p:not(.kicker):not(.founder__role){font-size:18px;color:#24503F;max-width:52ch}
 

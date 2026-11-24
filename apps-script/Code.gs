@@ -34,8 +34,8 @@ var DEFAULT_SETTINGS = [
   ['MAX_SEATS', 10, 'Founding batch size. Orders close when this many are submitted or paid.'],
   ['ENROLLMENT_OPEN', 'TRUE', 'Set to FALSE to stop new orders'],
   ['COURSE_DATES', 'To be announced', 'Shown in the welcome email, e.g. "Week 1 starts Mon, Jan 5"'],
-  ['CLASSROOM_CODE', '', 'Your Google Classroom class code. Until this is filled, PAID buyers get a "payment confirmed, details coming" email.'],
-  ['CLASSROOM_URL', '', 'Optional: direct join link to your Classroom'],
+  ['ACCESS_URL', '', 'Link where members join the course (any platform). Until this or ACCESS_CODE is filled, PAID buyers get a "payment confirmed, details coming" email.'],
+  ['ACCESS_CODE', '', 'Optional: join code or password, if your platform uses one'],
   ['QUIZ_URL', '', 'Your web Archetype Quiz link'],
   ['WORKBOOK_URL', '', 'Compass Workbook link (Google Doc with "Make a copy")'],
   ['WELCOME_NOTE', 'Welcome to the founding batch! I’m so glad you’re here.', 'A short personal line at the top of the welcome email'],
@@ -313,7 +313,7 @@ function sendAccess_(row, type) {
   }
 }
 
-function accessReady_(S) { return !!(S.CLASSROOM_CODE || S.CLASSROOM_URL); }
+function accessReady_(S) { return !!(S.ACCESS_URL || S.ACCESS_CODE); }
 
 function confirmationEmail_(o, S) {
   var first = String(o.Name).replace(/^'/, '').split(' ')[0];
@@ -325,12 +325,12 @@ function confirmationEmail_(o, S) {
     '<h1 style="font-size:26px;margin:8px 0 12px">Salamat, ' + esc_(first) + '! You’re in.</h1>' +
     '<p style="font-size:16px;line-height:1.6">' + esc_(S.WELCOME_NOTE || '') + '</p>' +
     '<p style="font-size:15px;line-height:1.6">Your payment for order <b>' + esc_(o.OrderId) + '</b> is confirmed, and your seat in ' + esc_(offer) + ' is saved.</p>' +
-    '<p style="font-size:15px;line-height:1.6">I’m finalizing the course dates and our Google Classroom. You’ll get a second email with your Classroom code, the Archetype Quiz and your Compass Workbook before Week 1. Wala ka pang kailangang gawin.</p>' +
+    '<p style="font-size:15px;line-height:1.6">I’m finalizing the course dates and where we’ll meet online. You’ll get a second email with how to join, the Archetype Quiz and your Compass Workbook before Week 1. Wala ka pang kailangang gawin.</p>' +
     '<p style="font-size:13px;color:#3E6B58;line-height:1.6;margin-top:18px">This is coaching, not therapy. If you’re in crisis, reach the NCMH Crisis Hotline: 1553 · 0917-899-8727 · 0919-057-1553 (24/7), or call 911.</p>' +
     '</div></div>';
   var text = 'Salamat, ' + first + '! You’re in.\n\n' + (S.WELCOME_NOTE || '') +
     '\n\nYour payment for order ' + o.OrderId + ' is confirmed, and your seat in ' + offer + ' is saved.' +
-    '\n\nI’m finalizing the course dates and our Google Classroom. You’ll get a second email with your Classroom code, the Archetype Quiz and your Compass Workbook before Week 1.' +
+    '\n\nI’m finalizing the course dates and where we’ll meet online. You’ll get a second email with how to join, the Archetype Quiz and your Compass Workbook before Week 1.' +
     '\n\nThis is coaching, not therapy. NCMH Crisis Hotline: 1553 · 0917-899-8727 · 0919-057-1553 (24/7), or 911.';
   return { subject: 'Payment confirmed: your ' + offer + ' seat is saved', html: html, text: text };
 }
@@ -339,8 +339,8 @@ function accessEmail_(o, S) {
   var first = String(o.Name).replace(/^'/, '').split(' ')[0];
   var offer = S.OFFER_NAME || 'Clarity & Confidence Compass';
   var items = [];
-  if (S.CLASSROOM_CODE) items.push(['Google Classroom code', '<b style="font-size:20px;letter-spacing:2px">' + esc_(S.CLASSROOM_CODE) + '</b>', 'Google Classroom code: ' + S.CLASSROOM_CODE]);
-  if (S.CLASSROOM_URL) items.push(['Join Classroom', link_(S.CLASSROOM_URL, 'Open Google Classroom'), 'Join Classroom: ' + S.CLASSROOM_URL]);
+  if (S.ACCESS_URL) items.push(['Join the course', link_(S.ACCESS_URL, 'Open the course'), 'Join the course: ' + S.ACCESS_URL]);
+  if (S.ACCESS_CODE) items.push(['Join code', '<b style="font-size:20px;letter-spacing:2px">' + esc_(S.ACCESS_CODE) + '</b>', 'Join code: ' + S.ACCESS_CODE]);
   if (S.QUIZ_URL) items.push(['Week 0: Archetype Quiz', link_(S.QUIZ_URL, 'Take the quiz'), 'Archetype Quiz: ' + S.QUIZ_URL]);
   if (S.WORKBOOK_URL) items.push(['Compass Workbook', link_(S.WORKBOOK_URL, 'Make your copy'), 'Compass Workbook: ' + S.WORKBOOK_URL]);
 
@@ -389,7 +389,7 @@ function menuResendAccess() {
 
 function menuSendAccessAll() {
   var ui = SpreadsheetApp.getUi(), S = settings_();
-  if (!accessReady_(S)) return ui.alert('Fill CLASSROOM_CODE in the Settings tab first. (Also update COURSE_DATES, QUIZ_URL and WORKBOOK_URL if you have them.)');
+  if (!accessReady_(S)) return ui.alert('Fill ACCESS_URL (or ACCESS_CODE) in the Settings tab first. (Also update COURSE_DATES, QUIZ_URL and WORKBOOK_URL if you have them.)');
   var sh = sheet_('Orders');
   var statuses = colValues_(sh, 'PaymentStatus'), emailStatuses = colValues_(sh, 'EmailStatus');
   var waiting = [];

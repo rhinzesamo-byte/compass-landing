@@ -37,8 +37,8 @@ Keep it **private**. Never share it publicly.
 | `PRICE_PHP` | `1500` (already filled). The website can't change this. |
 | `MAX_SEATS` | `10` (already filled). New orders stop when 10 people have submitted or paid. |
 | `COURSE_DATES` | e.g. `Week 1 starts Monday, January 5, 2027` |
-| `CLASSROOM_CODE` | Your Google Classroom class code. Can stay empty for now (see below). |
-| `CLASSROOM_URL` | Optional direct join link |
+| `ACCESS_URL` | Link where members join the course (any platform). Can stay empty for now (see below). |
+| `ACCESS_CODE` | Optional join code or password, if your platform uses one |
 | `QUIZ_URL` | Your Archetype Quiz link |
 | `WORKBOOK_URL` | Your Compass Workbook link |
 | `SUPPORT_EMAIL` | Where buyers can reply |
@@ -46,7 +46,7 @@ Keep it **private**. Never share it publicly.
 
 *"The Settings tab is the control panel."* Change the price, links or dates here — never in the code.
 
-**Details not final yet?** That's fine. You can sell now. While `CLASSROOM_CODE` is empty, marking a buyer `PAID` sends a **"Payment confirmed, your seat is saved"** email (EmailStatus = `CONFIRMATION_SENT`). When your dates, Classroom, quiz and workbook are ready: fill them in Settings → **Sales Funnel → Send Access to Everyone Waiting**. Every PAID buyer gets the full access email in one click.
+**Details not final yet?** That's fine. You can sell now. While `ACCESS_URL` is empty, marking a buyer `PAID` sends a **"Payment confirmed, your seat is saved"** email (EmailStatus = `CONFIRMATION_SENT`). When your dates, course platform, quiz and workbook are ready: fill them in Settings → **Sales Funnel → Send Access to Everyone Waiting**. Every PAID buyer gets the full access email in one click.
 
 ## Part 6 — Deploy the Web App
 1. **Deploy → New deployment →** gear icon → **Web app**.
@@ -78,7 +78,7 @@ On the QR step, enter `TEST123456` → **Submit**.
 
 ## Part 11 — Check the email
 ✅ `PaymentStatus = PAID` and `EmailStatus = SENT`, plus a row in **Fulfillment**.
-If `EmailStatus = FAILED`, the order **stays PAID**. Read the reason in **Fulfillment** (usually: `CLASSROOM_CODE` is empty), fix it, then resend.
+If `EmailStatus = FAILED`, the order **stays PAID**. Read the reason in **Fulfillment** (usually: the daily email limit), fix it, then resend.
 
 ## Part 12 — Resend access
 Buyer says "wala pa yung email"? Click their row in **Orders** → **Sales Funnel → Resend Access for Selected Order**. Only PAID orders work.
@@ -106,14 +106,14 @@ Nothing is "unhackable" or "DDoS-proof". This stack is right for a founding batc
 |---|---|
 | Tabs didn't appear | Did `setupCRM` run and did you click **Allow**? Is the script attached to *this* Sheet? |
 | Orders not saving | Is it the `/exec` URL? Access = **Anyone**? Did you redeploy after editing? Check **Logs** tab + Apps Script **Executions**. |
-| Email not sending | PaymentStatus exactly `PAID`? `CLASSROOM_CODE` filled? **Sales Funnel → Check email quota**. |
+| Email not sending | PaymentStatus exactly `PAID`? `ACCESS_URL` filled? **Sales Funnel → Check email quota**. |
 | "Security check failed" | `TURNSTILE_SECRET` in Script Properties? Domain allowed in Cloudflare? Set `REQUIRE_TURNSTILE` to `FALSE` while testing. |
 | "Founding batch is full" | Raise `MAX_SEATS`, or set old test orders to `CANCELLED`. |
 | Can the robot verify GCash/MariBank screenshots? | **No.** A screenshot can be fake. You check the real transfer in your bank app. |
 
 ## Before you launch
 - [ ] Choose course dates → fill `COURSE_DATES`
-- [ ] Create Google Classroom → fill `CLASSROOM_CODE`
+- [ ] Choose your course platform → fill `ACCESS_URL`
 - [ ] Ask Coach Russ Juson and Ravi Katta for permission (credits are not on the page yet)
 - [ ] Delete test rows from Orders / Payments
 - [ ] Run one full test with a friend (order → reference → PAID → email), then mark it `CANCELLED`
