@@ -3,8 +3,7 @@
 Sales page and checkout for the 4-week Taglish course by Rhinzes Amo.
 
 - **Page:** plain HTML/CSS/JS (no build step). Open `index.html` or deploy the folder as-is.
-- **Backend:** Google Sheets + Apps Script (`apps-script/Code.gs`).
-- **Payment:** manual GCash / MariBank InstaPay QR. The owner verifies each payment and marks it `PAID` in the Sheet.
+- **Reservations:** buyers pay by GCash / MariBank InstaPay QR, then fill in the Google Form linked in `config.js` (`RESERVATION_FORM_URL`). Responses go to the Form's linked Google Sheet. The owner checks each payment by hand.
+- **Settings:** `config.js` holds the form link and the QR codes. No backend is needed.
 
-The only file to edit after deploying Apps Script is `config.js` (paste the `/exec` URL).
-Full step-by-step setup: [SETUP.md](SETUP.md).
+The Apps Script backend (`apps-script/`, [SETUP.md](SETUP.md)) is no longer used by the page.

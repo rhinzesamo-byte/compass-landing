@@ -381,39 +381,23 @@
     </div>
   </section>
 
-  <!-- ============ 10. CHECKOUT ============ -->
+  <!-- ============ 10. RESERVE ============ -->
   <section class="enroll" id="enroll" aria-labelledby="enrollTitle">
     <div class="wrap enroll__wrap">
       <div class="enroll__head">
         <p class="kicker">Reserve your spot</p>
         <h2 id="enrollTitle" class="h2">Three quick steps.</h2>
-        <ol class="stepper" aria-label="Checkout progress">
-          <li class="is-active" data-step="1"><span>1</span>Your details</li>
-          <li data-step="2"><span>2</span>Pay by QR</li>
-          <li data-step="3"><span>3</span>Confirmation</li>
+        <ol class="stepper" aria-label="How to reserve">
+          <li class="is-active"><span>1</span>Pay by QR</li>
+          <li class="is-active"><span>2</span>Send your details</li>
+          <li class="is-active"><span>3</span>Get your welcome message</li>
         </ol>
       </div>
 
-      <div class="demo-banner" id="demoBanner" hidden>Demo mode — backend not connected yet. Nothing is saved. Add your Apps Script URL in <code>config.js</code>.</div>
-
       <div class="checkout">
         <!-- STEP 1 -->
-        <form class="cstep" id="step1" novalidate>
-          <h3>Your details</h3>
-          <p class="cstep__sub">Use the email you’ll check — your welcome message and course access go here.</p>
-          <label>Full name<input name="name" autocomplete="name" required maxlength="80" placeholder="Juan Dela Cruz"></label>
-          <label>Email<input name="email" type="email" autocomplete="email" required maxlength="120" placeholder="you@gmail.com"></label>
-          <label>Mobile number <em>(optional)</em><input name="phone" type="tel" autocomplete="tel" maxlength="20" placeholder="09XX XXX XXXX"></label>
-          <label class="hp" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
-          <label class="check"><input type="checkbox" name="consent" required> I understand this is coaching, not therapy, and that course dates will be announced to the founding batch.</label>
-          <div class="turnstile" data-turnstile></div>
-          <button class="btn btn--block" type="submit">Continue to Payment</button>
-          <p class="form-msg" role="alert"></p>
-        </form>
-
-        <!-- STEP 2 -->
-        <form class="cstep" id="step2" hidden novalidate>
-          <h3>Scan to pay</h3>
+        <div class="cstep" id="step1">
+          <h3><span class="cstep__num">1</span>Scan to pay ₱1,500</h3>
           <div class="pay">
             <div class="pay__qrwrap">
               <div class="pay__switch" role="group" aria-label="Choose a QR code" id="qrSwitch"></div>
@@ -423,31 +407,38 @@
               <p class="pay__hint">Both are InstaPay QR codes. Any bank or e-wallet app can scan either one.</p>
             </div>
             <div class="pay__info">
-              <p class="pay__amount">Amount: <b id="payAmount">₱1,500</b></p>
-              <p class="pay__order">Order ID: <b id="payOrder">—</b> <button type="button" class="copy" data-copy="payOrder">copy</button></p>
+              <p class="pay__amount">Amount: <b>₱1,500</b></p>
               <p class="pay__payee" id="payPayee"></p>
               <ol class="pay__how">
                 <li>Open GCash, Maya or your bank app and scan either QR.</li>
-                <li>Pay the exact amount. Put your Order ID in the note if your app allows it.</li>
-                <li>Copy the <b>reference number</b> from your receipt and paste it below.</li>
+                <li>On your phone? Screenshot the QR, then in your app tap <b>Scan QR → Upload</b> and pick the screenshot.</li>
+                <li>Pay the exact amount, then <b>screenshot your receipt</b> and note the <b>reference number</b>.</li>
               </ol>
             </div>
           </div>
-          <label>Payment reference number<input name="reference" required maxlength="40" placeholder="e.g. 1234 567 890123" autocomplete="off"></label>
-          <label>Name on the paying account<input name="payerName" maxlength="80" placeholder="If different from yours"></label>
-          <div class="turnstile" data-turnstile></div>
-          <button class="btn btn--block" type="submit">I’ve Paid — Submit Reference</button>
-          <p class="form-msg" role="alert"></p>
-          <button type="button" class="text-btn" id="restart">Start over with a different email</button>
-        </form>
+        </div>
+
+        <!-- STEP 2 -->
+        <div class="cstep" id="step2">
+          <h3><span class="cstep__num">2</span>Send your details</h3>
+          <p class="cstep__sub">Fill in the short reservation form. It asks for:</p>
+          <ul class="pay__how">
+            <li>Your full name</li>
+            <li>Your email (your welcome message and course access go here)</li>
+            <li>Your Messenger name or mobile number</li>
+            <li>Your payment reference number</li>
+            <li>A screenshot of your payment</li>
+          </ul>
+          <a class="btn btn--block" id="formBtn" href="#enroll" target="_blank" rel="noopener">Open the Reservation Form</a>
+          <p class="small form-note">The form opens in a new tab. Uploading your screenshot asks you to sign in to Google.</p>
+        </div>
 
         <!-- STEP 3 -->
-        <div class="cstep cstep--done" id="step3" hidden tabindex="-1">
+        <div class="cstep cstep--done" id="step3">
           <svg class="done-check" viewBox="0 0 80 80" aria-hidden="true"><circle cx="40" cy="40" r="34"/><path d="M24 41 l11 11 l22 -24"/></svg>
-          <h3>Salamat! Reference received.</h3>
-          <p>Order <b id="doneOrder">—</b> is now <b>waiting for payment confirmation</b>. I check every payment by hand. Once it’s confirmed, your welcome message and course access will arrive by email.</p>
-          <p class="hand done-note">Hindi pa ’to “paid” — konting hintay lang.</p>
-          <p class="small">No email after confirmation? Check Spam or Promotions, or <a href="#resend">request your access again</a>.</p>
+          <h3>Then, konting hintay lang.</h3>
+          <p>I check every payment by hand. Once yours is confirmed, your welcome message and course access arrive by email.</p>
+          <p class="small">No email after a day? Check Spam or Promotions first.</p>
         </div>
       </div>
     </div>
@@ -468,7 +459,7 @@
         <details><summary>Do I have to share my fears or money situation with the group?</summary><p>No. Your fears, money and heavy feelings are never asked for in the group. Those parts of the workbook stay private. Sharing on calls is volunteers-first, and you can pass.</p></details>
         <details><summary>Is this therapy?</summary><p>No — this is coaching, not therapy. If you’re in crisis, please reach the NCMH Crisis Hotline at 1553, 0917-899-8727 or 0919-057-1553 (24/7), or call 911.</p></details>
         <details><summary>Will this help me earn more money?</summary><p>I don’t promise income or give financial advice. In Week 3, you explore three paths of value — your current job, a career shift, or your own small offer — and every path is valid.</p></details>
-        <details><summary>How do I pay, and when do I get access?</summary><p>Scan the QR with GCash, Maya or any bank app that supports QR Ph / InstaPay, then submit your reference number. I check each payment by hand. Once it’s confirmed, your welcome message and course access arrive by email.</p></details>
+        <details><summary>How do I pay, and when do I get access?</summary><p>Scan the QR with GCash, Maya or any bank app that supports QR Ph / InstaPay, then fill in the reservation form with your reference number and a screenshot of your payment. I check each payment by hand. Once it’s confirmed, your welcome message and course access arrive by email.</p></details>
         <details><summary>What do I need?</summary><p>A Google account (for your workbook and the Friday calls on Google Meet), a phone or laptop, and the willingness to do the activities. Using AI is optional.</p></details>
         <details><summary>How does the refund guarantee work?</summary><p>If you submit the activities for all 8 lessons, attend or watch all 4 calls, and attempt your First Action — and still have no clear direction — you get a refund. Requests are accepted until 7 days after graduation.</p></details>
       </div>
@@ -484,32 +475,7 @@
       <p class="final__hand hand reveal">sabay nating hanapin.</p>
       <a class="btn btn--gold btn--lg reveal" href="#enroll">Reserve My Founding Spot <span class="btn__price">₱1,500</span></a>
 
-      <div class="minis">
-        <form class="mini reveal" id="leadForm" novalidate>
-          <p class="mini__title">Not ready yet?</p>
-          <p class="mini__sub">Get an email when the course dates are set.</p>
-          <div class="mini__row">
-            <input name="name" placeholder="First name" aria-label="First name" maxlength="80" required>
-            <input name="email" type="email" placeholder="Email" aria-label="Email" maxlength="120" required>
-            <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn--ghost" type="submit">Notify Me</button>
-          </div>
-          <div class="turnstile" data-turnstile></div>
-          <p class="form-msg" role="status"></p>
-        </form>
-
-        <form class="mini reveal" id="resend" novalidate>
-          <p class="mini__title">Already paid?</p>
-          <p class="mini__sub">Didn’t get your access email? Request it again.</p>
-          <div class="mini__row">
-            <input name="email" type="email" placeholder="Email you used" aria-label="Email you used" maxlength="120" required>
-            <input name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <button class="btn btn--ghost" type="submit">Resend Access</button>
-          </div>
-          <div class="turnstile" data-turnstile></div>
-          <p class="form-msg" role="status"></p>
-        </form>
-      </div>
+      <p class="final__note reveal">Not ready yet? Bookmark this page. The founding batch dates will be posted here.</p>
     </div>
   </section>
   </main>
